@@ -1,0 +1,184 @@
+/* Geral */
+:root {
+  --background-image: url('./sunshine.jpg');
+  --clr-font: #fff;
+  --clr-bgc:#7a98ec;
+  --clr-h1: rgb(57, 59, 59);
+  --clr-border: #000;
+  --clr-button: #061849 ;
+}
+
+.dark-theme {
+  --background-image: url('./night.jpg');
+  --clr-bgc: #061849;
+  --clr-font: #fff;
+  --clr-h1: rgb(255, 255, 255);
+  --clr-border: #fff;
+  --clr-button: #7a98ec;
+}
+input[type="checkbox"]{
+  position: relative;
+  width: 40px;
+  height: 20px;
+  -webkit-appearance: none;
+ -moz-appereance:none;
+  background-color: var(--clr-bgc);
+  outline: none;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+  transition: .5s;
+  border: 0.5px solid var(--clr-font);
+  transform: translateX(175px);
+}
+
+input:checked[type="checkbox"]{
+  background: var(--clr-bgc);
+  border: 0.5px solid var(--clr-font);
+}
+input[type="checkbox"]:before{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  background: var(--clr-font);
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+  transition: .5s;
+} 
+input:checked[type="checkbox"]:before{
+  left: 20px;
+}
+  * {
+    padding: 0;
+    margin: 0;
+    font-family: "Play", sans-serif;
+  }
+  
+  body {
+    /*background: linear-gradient(180deg, rgba(89, 76, 238, 1) 0%, #8dd0f5 100%);*/
+    background-image: var(--background-image);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s;
+  }
+  
+  .hide {
+    display: none !important;
+  }
+  .nome{
+    display: flex;
+    color: var(--clr-h1);
+    position:absolute;
+    transform: translateY(-190px);
+    border-bottom: 1px solid var(--clr-border);
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+  }
+  .container {
+    background-color:var(--clr-bgc);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 2rem;
+    color:var(--clr-font);
+    border-radius: 1rem;
+    max-width: 400px;
+    border: 2px solid var(--clr-border);
+    animation: 1s;
+  }
+  
+  /* Form */
+  .form h3 {
+    margin-bottom: 1rem;
+  }
+  
+  .form-input-container {
+    display: flex;
+  }
+  
+  .form input {
+    padding: 0.8rem;
+    border: none;
+    flex: 1;
+    border-radius: 4px;
+  }
+  
+  .form button {
+    padding: 0.8rem;
+    min-width: 50px;
+    margin-left: 8px;
+    background-color:  var(--clr-button);
+    color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  button i{
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  
+  /* Clima */
+  #weather-data,
+  #error-message,
+  #loader,
+  #suggestions {
+    border-top: 1px solid #fff;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    text-align: center;
+  }
+  
+  #weather-data h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.6rem;
+    animation: .5s;
+  }
+  
+  #weather-data h2 i {
+    font-size: 1rem;
+  }
+  
+  #weather-data span {
+    margin: 0.6rem;
+  }
+  
+  #temperature {
+    font-size: 4rem;
+  }
+  
+  #country {
+    height: 15px;
+  }
+  
+  #description-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.6rem 0;
+  }
+  
+  #description {
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+  
+  #details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #details-container #umidity {
+    border-right: 1px solid #fff;
+    margin: 0.6rem;
+    padding: 0.6rem;
+  }
