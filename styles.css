@@ -21,7 +21,7 @@ input[type="checkbox"]{
   width: 40px;
   height: 20px;
   -webkit-appearance: none;
- -moz-appereance:none;
+  -moz-appearance: none;
   background-color: var(--clr-bgc);
   outline: none;
   border-radius: 20px;
@@ -29,7 +29,9 @@ input[type="checkbox"]{
   transition: .5s;
   border: 0.5px solid var(--clr-font);
   transform: translateX(175px);
+  margin:  0.6rem;
 }
+
 
 input:checked[type="checkbox"]{
   background: var(--clr-bgc);
@@ -76,13 +78,14 @@ input:checked[type="checkbox"]:before{
   .nome{
     display: flex;
     color: var(--clr-h1);
-    position:absolute;
-    transform: translateY(-190px);
+    position: absolute;
+    transform: translateY(-210px);
     border-bottom: 1px solid var(--clr-border);
-    margin-bottom: 10px;
     font-size: 1.25rem;
+    transition: .5s;
   }
   .container {
+    margin: 1rem;
     background-color:var(--clr-bgc);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 2rem;
@@ -95,6 +98,7 @@ input:checked[type="checkbox"]:before{
   
   /* Form */
   .form h3 {
+    margin: 1rem;
     margin-bottom: 1rem;
   }
   
@@ -125,10 +129,7 @@ input:checked[type="checkbox"]:before{
   }
   
   /* Clima */
-  #weather-data,
-  #error-message,
-  #loader,
-  #suggestions {
+  #weather-data{
     border-top: 1px solid #fff;
     margin-top: 1.5rem;
     padding-top: 1.5rem;
@@ -182,3 +183,29 @@ input:checked[type="checkbox"]:before{
     margin: 0.6rem;
     padding: 0.6rem;
   }
+@media screen  and (max-width:768px){
+    .nome{
+      transform: translateY(-210px);
+      color: #000;
+    }
+  
+}
+    @media screen  and (max-width: 300px){
+          .container{
+              display: block;
+            }
+            .form h3{
+              font-size: 1rem;
+            }
+            .nome{
+              display:  none;
+            }
+            input[type="checkbox"]{
+                transform: translateX(100px);
+                transform: translateY(-20px);
+                position: absolute;
+            }
+            }
+    
+      
+    
